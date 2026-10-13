@@ -10,6 +10,8 @@
 
 This is the company's cross-market product policy for China, Hong Kong, Macao, and Taiwan representations. It applies to product-controlled user-facing displays regardless of the selected release market. It is an internal product-policy baseline, not a statement that United States or European Union law universally requires the same wording.
 
+**Scope limit:** This policy governs only region-naming text on product-controlled surfaces. It does not determine any market's legal obligations, map review/surveying conclusions, provider licensing, child/age rules, or app-store age ratings; those remain separate market-specific checks.
+
 ## Controlled surfaces
 
 Apply this policy to product-controlled:

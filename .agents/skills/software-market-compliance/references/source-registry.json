@@ -4,9 +4,10 @@
     "title": "Product Naming Policy: One China Baseline",
     "authority": "AppGeoCompliance product policy owner",
     "source_type": "company_policy",
+    "domain": "naming",
     "url": ".agents/skills/software-market-compliance/references/product-one-china-policy.md",
     "last_checked": "2026-10-13",
-    "applicability": "Company product-policy baseline for product-controlled China, Hong Kong, Macao, and Taiwan displays in cn-mainland, us, and eu releases. It is not a claim that US or EU law universally requires identical wording."
+    "applicability": "Company region-naming policy for product-controlled China, Hong Kong, Macao, and Taiwan labels in cn-mainland, us, and eu releases. It applies only to the naming domain and is not a claim that US or EU law universally requires identical wording."
   },
   {
     "id": "CN-GB-2659",

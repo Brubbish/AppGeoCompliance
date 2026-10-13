@@ -2,6 +2,8 @@
   "one_china_policy": {
     "id": "PRODUCT-ONE-CHINA-1",
     "requirement_type": "company_policy",
+    "domain": "naming",
+    "scope": "region-naming text on product-controlled surfaces only; does not govern legal, map-content, or age rules",
     "source_file": "references/product-one-china-policy.md",
     "markets": ["cn-mainland", "us", "eu"],
     "controlled_surfaces": [

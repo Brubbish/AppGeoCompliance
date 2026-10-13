@@ -103,6 +103,27 @@ class SoftwareMarketComplianceSkillTests(unittest.TestCase):
         self.assertEqual("中国台湾地区", policy["entities"]["TW"]["zh-Hans"])
         self.assertEqual("Taiwan, China", policy["entities"]["TW"]["en"])
 
+    def test_one_china_policy_is_scoped_to_naming_domain_only(self) -> None:
+        rules = json.loads((SKILL_ROOT / "rules" / "naming.json").read_text(encoding="utf-8"))
+        policy = rules["one_china_policy"]
+        self.assertEqual("naming", policy["domain"])
+        self.assertIn("region-naming", policy["scope"])
+        sources = json.loads((SKILL_ROOT / "references" / "source-registry.json").read_text(encoding="utf-8"))
+        policy_source = next(source for source in sources if source["id"] == "PRODUCT-ONE-CHINA-1")
+        self.assertEqual("naming", policy_source["domain"])
+        for rule_file in ("regulation.json", "maps.json", "age.json"):
+            data = json.loads((SKILL_ROOT / "rules" / rule_file).read_text(encoding="utf-8"))
+            values = data.get("sources", {})
+            referenced = sum(values.values(), []) if isinstance(values, dict) else values
+            self.assertNotIn("PRODUCT-ONE-CHINA-1", referenced)
+
+    def test_checklist_keeps_policy_within_region_naming(self) -> None:
+        checklist = CHECKLIST.read_text(encoding="utf-8")
+        self.assertIn("region-naming surfaces", checklist)
+        self.assertIn("in the region-naming domain", checklist)
+        self.assertIn("region-name text in custom labels, legends, and overlays", checklist)
+        self.assertIn("Do not use this naming policy to replace market-specific legal, map, or age sources", checklist)
+
     def test_one_china_policy_source_is_internal_and_linked(self) -> None:
         sources = json.loads((SKILL_ROOT / "references" / "source-registry.json").read_text(encoding="utf-8"))
         policy_source = next(source for source in sources if source["id"] == "PRODUCT-ONE-CHINA-1")
