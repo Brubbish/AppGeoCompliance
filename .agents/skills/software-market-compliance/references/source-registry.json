@@ -1,0 +1,281 @@
+[
+  {
+    "id": "CN-GB-2659",
+    "title": "GB/T 2659.1-2022 世界各国和地区及其行政区划名称代码 第1部分：国家和地区代码",
+    "authority": "国家市场监督管理总局、国家标准化管理委员会",
+    "source_type": "technical_standard",
+    "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=FBCE39BE204B54F6F944092C209121F2",
+    "last_checked": "2026-10-12",
+    "applicability": "用于结构化国家和地区代码一致性；不是主权、政治称谓或法律边界裁定。"
+  },
+  {
+    "id": "UN-M49",
+    "title": "UN M49 Standard country or area codes for statistical use",
+    "authority": "United Nations Statistics Division",
+    "source_type": "technical_standard",
+    "url": "https://unstats.un.org/unsd/methodology/m49/",
+    "last_checked": "2026-10-12",
+    "applicability": "用于统计代码和区域分组；不表示政治承认、主权或边界立场。"
+  },
+  {
+    "id": "UNGEGN",
+    "title": "United Nations Group of Experts on Geographical Names",
+    "authority": "United Nations",
+    "source_type": "technical_standard",
+    "url": "https://unstats.un.org/unsd/ungegn/",
+    "last_checked": "2026-10-12",
+    "applicability": "用于地名标准化研究；不是争议地名或法律边界的统一裁定。"
+  },
+  {
+    "id": "ISO-3166",
+    "title": "ISO 3166 country codes",
+    "authority": "International Organization for Standardization",
+    "source_type": "technical_standard",
+    "url": "https://www.iso.org/iso-3166-country-codes.html",
+    "last_checked": "2026-10-12",
+    "applicability": "用于代码互操作；不是主权、政治称谓或法律边界结论。"
+  },
+  {
+    "id": "EU-STYLE-GUIDE",
+    "title": "EU Interinstitutional Style Guide",
+    "authority": "Publications Office of the European Union",
+    "source_type": "regulator_guidance",
+    "url": "https://style-guide.europa.eu/en/home",
+    "last_checked": "2026-10-12",
+    "applicability": "欧盟机构出版风格参考，不直接约束私人软件，也不是全球边界权威。"
+  },
+  {
+    "id": "CN-PIPL",
+    "title": "中华人民共和国个人信息保护法",
+    "authority": "全国人大常委会",
+    "source_type": "law",
+    "url": "https://flk.npc.gov.cn/detail?id=ff8081817b6472a3017b656cc2040044",
+    "last_checked": "2026-10-12",
+    "applicability": "个人信息处理、敏感个人信息、未成年人和跨境处理按具体活动适用。"
+  },
+  {
+    "id": "CN-APP-FILING",
+    "title": "工业和信息化部关于开展移动互联网应用程序备案工作的通知",
+    "authority": "工业和信息化部",
+    "source_type": "regulator_guidance",
+    "url": "https://www.gov.cn/zhengce/zhengceku/202308/content_6897341.htm",
+    "last_checked": "2026-10-12",
+    "applicability": "在中国境内从事互联网信息服务的 APP 主办者及相关主体；备案不替代业务许可。"
+  },
+  {
+    "id": "CN-ANTI-FRAUD-LAW",
+    "title": "中华人民共和国反电信网络诈骗法",
+    "authority": "全国人大常委会",
+    "source_type": "law",
+    "url": "https://flk.npc.gov.cn/detail?id=ff80818182cf5c220182fd54401023d6",
+    "last_checked": "2026-10-12",
+    "applicability": "APP 许可或备案义务按具体服务类型判断。"
+  },
+  {
+    "id": "CN-CONTENT-ECOLOGY",
+    "title": "网络信息内容生态治理规定",
+    "authority": "国家互联网信息办公室",
+    "source_type": "regulator_guidance",
+    "url": "https://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm",
+    "last_checked": "2026-10-12",
+    "applicability": "境内网络信息内容生态治理活动；不是穷尽敏感词清单。"
+  },
+  {
+    "id": "CN-GEN-AI",
+    "title": "生成式人工智能服务管理暂行办法",
+    "authority": "国家网信办等七部门",
+    "source_type": "regulator_guidance",
+    "url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm",
+    "last_checked": "2026-10-12",
+    "applicability": "主要适用于向中国境内公众提供生成式人工智能服务；仅研发或非公众提供需另行判断。"
+  },
+  {
+    "id": "CN-DEEP-SYNTHESIS",
+    "title": "互联网信息服务深度合成管理规定",
+    "authority": "国家网信办、工业和信息化部、公安部",
+    "source_type": "regulator_guidance",
+    "url": "https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm",
+    "last_checked": "2026-10-12",
+    "applicability": "适用于使用深度合成技术提供互联网信息服务的主体。"
+  },
+  {
+    "id": "CN-AI-LABEL",
+    "title": "人工智能生成合成内容标识办法",
+    "authority": "国家网信办、工业和信息化部、公安部、国家广播电视总局",
+    "source_type": "regulator_guidance",
+    "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm",
+    "last_checked": "2026-10-12",
+    "applicability": "2025-09-01 施行；适用于受算法推荐、深度合成或生成式 AI 相关规定覆盖的网络信息服务。"
+  },
+  {
+    "id": "CN-MAP-REGULATION",
+    "title": "地图管理条例",
+    "authority": "国务院",
+    "source_type": "law",
+    "url": "https://flk.npc.gov.cn/detail?id=ff8080816f3cbb3c016f412d67521b66",
+    "last_checked": "2026-10-12",
+    "applicability": "公开地图、地图产品和互联网地图的审核及内容要求取决于具体地图和例外情况。"
+  },
+  {
+    "id": "CN-MNR-MAP-GUIDE",
+    "title": "地图审核服务指南（2023版）",
+    "authority": "自然资源部",
+    "source_type": "regulator_guidance",
+    "url": "https://www.mnr.gov.cn/bsznxxk/fwzn/202302/t20230213_2775743.html",
+    "last_checked": "2026-10-12",
+    "applicability": "地图审核范围、材料和互联网地图审图号的办事参考，具体适用须按地图内容判断。"
+  },
+  {
+    "id": "CN-MNR-STANDARD-MAPS",
+    "title": "标准地图服务系统",
+    "authority": "自然资源部",
+    "source_type": "regulator_guidance",
+    "url": "http://bzdt.ch.mnr.gov.cn/",
+    "last_checked": "2026-10-12",
+    "applicability": "标准地图及审图号参考；不是任意修改、再分发或产品展示的自动批准。"
+  },
+  {
+    "id": "CN-SURVEYING-LAW",
+    "title": "中华人民共和国测绘法",
+    "authority": "全国人大常委会",
+    "source_type": "law",
+    "url": "https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf848b309e7",
+    "last_checked": "2026-10-12",
+    "applicability": "自行测绘、地图编制、导航电子地图制作或互联网地图服务需按具体活动评估；集成 SDK 不自动等同于测绘活动。"
+  },
+  {
+    "id": "US-FTC-ACT",
+    "title": "Federal Trade Commission Act",
+    "authority": "Federal Trade Commission",
+    "source_type": "law",
+    "url": "https://www.ftc.gov/legal-library/browse/statutes/federal-trade-commission-act",
+    "last_checked": "2026-10-12",
+    "applicability": "隐私、功能和营销声明的欺骗或不公平风险取决于实际业务与事实。"
+  },
+  {
+    "id": "US-CCPA",
+    "title": "California Consumer Privacy Act overview",
+    "authority": "California Department of Justice",
+    "source_type": "law",
+    "url": "https://oag.ca.gov/privacy/ccpa",
+    "last_checked": "2026-10-12",
+    "applicability": "仅对满足适用门槛的营利性企业等主体适用；门槛、豁免和规则需要事实分析。"
+  },
+  {
+    "id": "US-COPPA",
+    "title": "Children's Online Privacy Protection Rule (COPPA)",
+    "authority": "Federal Trade Commission",
+    "source_type": "law",
+    "url": "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa",
+    "last_checked": "2026-10-12",
+    "applicability": "面向 13 岁以下儿童或实际知悉收集其个人信息时按具体情形适用。"
+  },
+  {
+    "id": "US-GPLAY-DATA",
+    "title": "Google Play User Data policy",
+    "authority": "Google",
+    "source_type": "platform_policy",
+    "url": "https://support.google.com/googleplay/android-developer/answer/10144311?hl=en",
+    "last_checked": "2026-10-12",
+    "applicability": "适用于 Google Play 分发；不替代美国法律分析。"
+  },
+  {
+    "id": "EU-GDPR",
+    "title": "General Data Protection Regulation (EU) 2016/679",
+    "authority": "European Union",
+    "source_type": "law",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "last_checked": "2026-10-12",
+    "applicability": "领土适用、法律依据、透明度、DPIA 和跨境传输取决于处理活动与服务事实。"
+  },
+  {
+    "id": "EU-DSA",
+    "title": "Digital Services Act (EU) 2022/2065",
+    "authority": "European Union",
+    "source_type": "law",
+    "url": "https://eur-lex.europa.eu/eli/reg/2022/2065/oj",
+    "last_checked": "2026-10-12",
+    "applicability": "适用于中介服务、托管服务、在线平台等具体服务角色，不适用于所有普通软件。"
+  },
+  {
+    "id": "EU-AI-ACT",
+    "title": "Artificial Intelligence Act (EU) 2024/1689",
+    "authority": "European Union",
+    "source_type": "law",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+    "last_checked": "2026-10-12",
+    "applicability": "义务取决于 AI 系统分类、组织角色、投放市场和分阶段适用日期。"
+  },
+  {
+    "id": "EU-EAA",
+    "title": "European Accessibility Act (EU) 2019/882",
+    "authority": "European Union",
+    "source_type": "law",
+    "url": "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+    "last_checked": "2026-10-12",
+    "applicability": "只适用于列举的产品和服务及其成员国实施法；本 skill 仅在年龄来源说明中引用，不做无障碍扫描。"
+  },
+  {
+    "id": "APPLE-REVIEW",
+    "title": "App Store Review Guidelines",
+    "authority": "Apple",
+    "source_type": "platform_policy",
+    "url": "https://developer.apple.com/app-store/review/guidelines/",
+    "last_checked": "2026-10-12",
+    "applicability": "仅适用于 Apple App Store 分发，年龄分级和儿童相关要求以当前平台规则为准。"
+  },
+  {
+    "id": "GOOGLE-PLAY-POLICY",
+    "title": "Google Play Developer Program Policies",
+    "authority": "Google",
+    "source_type": "platform_policy",
+    "url": "https://play.google.com/about/developer-content-policy/",
+    "last_checked": "2026-10-12",
+    "applicability": "仅适用于 Google Play 分发，年龄分级和内容要求以当前平台规则为准。"
+  },
+  {
+    "id": "GOOGLE-MAPS-TERMS",
+    "title": "Google Maps Platform Terms",
+    "authority": "Google",
+    "source_type": "contract",
+    "url": "https://cloud.google.com/maps-platform/terms",
+    "last_checked": "2026-10-12",
+    "applicability": "适用于所使用的 Google Maps Platform 产品和合同；不是边界或政治称谓裁定。"
+  },
+  {
+    "id": "MAPBOX-TERMS",
+    "title": "Mapbox Terms of Service",
+    "authority": "Mapbox",
+    "source_type": "contract",
+    "url": "https://www.mapbox.com/legal/tos",
+    "last_checked": "2026-10-12",
+    "applicability": "实际许可、离线、缓存、存储和署名义务以产品、套餐和订单为准。"
+  },
+  {
+    "id": "HERE-TERMS",
+    "title": "HERE Terms",
+    "authority": "HERE Technologies",
+    "source_type": "contract",
+    "url": "https://legal.here.com/terms",
+    "last_checked": "2026-10-12",
+    "applicability": "不同 HERE 产品、地区和订单适用不同条款。"
+  },
+  {
+    "id": "OSM-ODBL",
+    "title": "OpenStreetMap Copyright and ODbL",
+    "authority": "OpenStreetMap Foundation and contributors",
+    "source_type": "contract",
+    "url": "https://www.openstreetmap.org/copyright",
+    "last_checked": "2026-10-12",
+    "applicability": "数据许可和标准瓦片服务政策不同；OSM 不是官方边界权威。"
+  },
+  {
+    "id": "US-BGN",
+    "title": "U.S. Board on Geographic Names",
+    "authority": "U.S. Geological Survey",
+    "source_type": "technical_standard",
+    "url": "https://www.usgs.gov/core-science-systems/ngp/board-on-geographic-names",
+    "last_checked": "2026-10-12",
+    "applicability": "服务美国政府官方地名使用，不是全球政治称谓或法律边界裁定。"
+  }
+]

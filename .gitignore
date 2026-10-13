@@ -1,0 +1,5 @@
+.zcode/
+**/__pycache__/
+*.py[cod]
+compliance-report.md
+compliance-report.json

@@ -1,0 +1,51 @@
+{
+  "age_patterns": [
+    "儿童",
+    "未成年人",
+    "未满(?:18|16|14|13)岁",
+    "child(?:ren)?",
+    "minor",
+    "under\\s*13",
+    "COPPA",
+    "kids?\\s*(?:mode|app)",
+    "family\\s*mode",
+    "家长同意",
+    "parental\\s+consent",
+    "age\\s*gate",
+    "birthday",
+    "date\\s+of\\s+birth",
+    "出生日期",
+    "生日"
+  ],
+  "minimum_age_patterns": [
+    "(?:[\"']?(?:minimumAge|minAge|min_age)[\"']?|最低年龄|最低年齡)\\s*[:=]\\s*(\\d{1,2})",
+    "(?:age|年龄|年齡)\\s*(?:must\\s+be|>=|至少|不低于|不得低于)\\s*(\\d{1,2})"
+  ],
+  "explicit_bypass_patterns": [
+    "(?:[\"']?(?:ageGateEnabled|age_gate_enabled)[\"']?|年龄验证|年龄驗證)\\s*[:=]\\s*false",
+    "(?:[\"']?(?:skipAgeCheck|skip_age_check|allowUnderage|allow_underage)[\"']?)\\s*[:=]\\s*true",
+    "(?:bypass|绕过|繞過).{0,30}(?:age|年龄|年齡)"
+  ],
+  "all_ages_patterns": [
+    "适合所有年龄",
+    "適合所有年齡",
+    "all\\s+ages",
+    "everyone"
+  ],
+  "adult_content_patterns": [
+    "成人内容",
+    "成人內容",
+    "adult\\s+content",
+    "18\\s*\\+",
+    "gambling",
+    "赌博",
+    "賭博",
+    "pornographic",
+    "色情"
+  ],
+  "sources": {
+    "cn-mainland": ["CN-PIPL", "CN-APP-FILING"],
+    "us": ["US-COPPA", "US-CCPA", "APPLE-REVIEW", "GOOGLE-PLAY-POLICY"],
+    "eu": ["EU-GDPR", "EU-DSA", "EU-EAA"]
+  }
+}

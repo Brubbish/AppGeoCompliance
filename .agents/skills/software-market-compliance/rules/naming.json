@@ -1,0 +1,28 @@
+{
+  "patterns": [
+    {"id": "taiwan", "label": "台湾/Taiwan", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:台湾|臺灣|Taiwan)"},
+    {"id": "hong-kong", "label": "香港/Hong Kong", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:香港|Hong\\s+Kong)"},
+    {"id": "macao", "label": "澳门/Macau", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:澳门|澳門|Macau|Macao)"},
+    {"id": "tibet", "label": "西藏/Tibet", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:西藏|Tibet)"},
+    {"id": "xinjiang", "label": "新疆/Xinjiang", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:新疆|Xinjiang)"},
+    {"id": "kashmir", "label": "克什米尔/Kashmir", "markets": ["us", "eu"], "pattern": "(?:克什米尔|Kashmir)"},
+    {"id": "crimea", "label": "克里米亚/Crimea", "markets": ["us", "eu"], "pattern": "(?:克里米亚|Crimea)"}
+  ],
+  "approved_policy_files": [
+    "naming-policy.json",
+    "country-region-policy.json",
+    "country-region-names.json"
+  ],
+  "sources": [
+    "CN-GB-2659",
+    "UN-M49",
+    "UNGEGN",
+    "ISO-3166",
+    "EU-STYLE-GUIDE"
+  ],
+  "notes": [
+    "A match is a review candidate, not a universal legal violation.",
+    "Do not encode one fixed political label as a rule for every UI context.",
+    "Images are not OCR-scanned by the standard-library implementation; review image assets separately."
+  ]
+}

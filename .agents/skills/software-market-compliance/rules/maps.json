@@ -1,0 +1,81 @@
+{
+  "providers": {
+    "openstreetmap": ["openstreetmap.org", "tile.openstreetmap.org", "osm"],
+    "mapbox": ["mapbox", "mapboxgl", "mapbox-gl"],
+    "google": ["maps.googleapis.com", "google.maps", "google maps", "com.google.android.gms.maps"],
+    "here": ["here.com", "here sdk", "heremaps"],
+    "amap": ["amap", "高德地图", "lbs.amap.com"],
+    "baidu": ["baidu map", "百度地图", "api.map.baidu.com"]
+  },
+  "attribution_patterns": [
+    "OpenStreetMap contributors",
+    "©\\s*(?:OpenStreetMap|Mapbox|Google|HERE)",
+    "Map data.{0,50}(?:OpenStreetMap|Mapbox|Google|HERE)",
+    "Powered by.{0,50}(?:OpenStreetMap|Mapbox|Google|HERE)"
+  ],
+  "explicit_disabled_attribution_patterns": [
+    "(?:show|enable|include|display)[A-Za-z0-9_.-]*(?:attribution|logo)\\s*[:=]\\s*false",
+    "(?:attribution|logo)(?:Enabled|Visible|Shown)?\\s*[:=]\\s*false",
+    "(?:hide|remove|disable)(?:Attribution|Logo)\\s*\\(",
+    "setAttributionEnabled\\s*\\(\\s*false"
+  ],
+  "public_map_patterns": [
+    "<Map",
+    "MapView",
+    "mapboxgl",
+    "google\\.maps",
+    "tile\\.(?:openstreetmap|mapbox)",
+    "行政区",
+    "国界",
+    "海岸线",
+    "boundary",
+    "geojson",
+    "地图"
+  ],
+  "china_review_evidence_patterns": [
+    "审图号",
+    "地图审核",
+    "测绘资质",
+    "互联网地图服务",
+    "map review",
+    "approval number",
+    "surveying license"
+  ],
+  "custom_boundary_patterns": [
+    "行政区",
+    "国界",
+    "海岸线",
+    "boundary",
+    "border",
+    "disputed",
+    "争议地区",
+    "GeoJSON.*(?:boundary|border)"
+  ],
+  "coordinate_patterns": [
+    "GCJ[-_ ]?02",
+    "火星坐标",
+    "WGS[-_ ]?84",
+    "EPSG:?4326",
+    "EPSG:?3857",
+    "BD[-_ ]?09",
+    "proj4"
+  ],
+  "offline_patterns": [
+    "offline",
+    "离线",
+    "prefetch",
+    "预取",
+    "bulk\\s+(?:download|fetch)",
+    "批量(?:下载|抓取)"
+  ],
+  "sources": {
+    "cn-mainland": [
+      "CN-MAP-REGULATION",
+      "CN-MNR-MAP-GUIDE",
+      "CN-MNR-STANDARD-MAPS",
+      "CN-SURVEYING-LAW"
+    ],
+    "us": ["GOOGLE-MAPS-TERMS", "MAPBOX-TERMS", "HERE-TERMS", "OSM-ODBL", "US-BGN"],
+    "eu": ["GOOGLE-MAPS-TERMS", "MAPBOX-TERMS", "HERE-TERMS", "OSM-ODBL", "EU-STYLE-GUIDE"]
+  }
+}

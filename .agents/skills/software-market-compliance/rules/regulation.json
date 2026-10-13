@@ -1,0 +1,76 @@
+{
+  "privacy_non_collection_patterns": [
+    "(?:不收集|不会收集|不获取|不会获取)\\s*(?:用户的)?(?:精确)?(?:位置|定位|GPS|地理位置)",
+    "(?:does not|doesn't|do not|don't|never)\\s+(?:collect|store|share|use)\\s+(?:your\\s+)?(?:precise\\s+)?(?:location|GPS|geolocation)",
+    "(?:no|without)\\s+(?:precise\\s+)?(?:location|GPS)\\s+(?:data|collection)"
+  ],
+  "location_signal_patterns": [
+    "ACCESS_FINE_LOCATION",
+    "ACCESS_COARSE_LOCATION",
+    "NSLocationWhenInUseUsageDescription",
+    "NSLocationAlwaysAndWhenInUseUsageDescription",
+    "navigator\\.geolocation",
+    "CLLocationManager",
+    "requestLocation",
+    "preciseLocation",
+    "locationManager"
+  ],
+  "location_transmission_patterns": [
+    "(?:latitude|longitude|lat|lng|location|geolocation|GPS).{0,100}(?:fetch|axios|XMLHttpRequest|POST|PUT|send|upload|analytics|track)",
+    "(?:fetch|axios|XMLHttpRequest|POST|PUT|send|upload|analytics|track).{0,100}(?:latitude|longitude|lat|lng|location|geolocation|GPS)",
+    "(?:location|geolocation|GPS).{0,100}(?:database|storage|persist|save|保存|存储|数据库)"
+  ],
+  "ai_patterns": [
+    "生成式人工智能",
+    "生成式AI",
+    "generative\\s+AI",
+    "text[-_ ]to[-_ ]image",
+    "image\\s+generation",
+    "深度合成",
+    "deepfake",
+    "model\\.generate",
+    "openai|anthropic|gemini|llama"
+  ],
+  "ugc_patterns": [
+    "用户生成内容",
+    "user[-_ ]generated\\s+content",
+    "user[-_ ]generated",
+    "comments?",
+    "public\\s+posts?",
+    "举报|report\\s+(?:a\\s+)?post|block\\s+user"
+  ],
+  "china_filing_evidence_patterns": [
+    "备案号",
+    "ICP备案",
+    "APP备案",
+    "MIIT",
+    "beian\\.miit\\.gov\\.cn"
+  ],
+  "ai_label_patterns": [
+    "AI生成",
+    "人工智能生成",
+    "generated\\s+by\\s+AI",
+    "synthetic\\s+content",
+    "内容标识",
+    "watermark"
+  ],
+  "sources": {
+    "cn-mainland": [
+      "CN-PIPL",
+      "CN-APP-FILING",
+      "CN-GEN-AI",
+      "CN-DEEP-SYNTHESIS",
+      "CN-AI-LABEL"
+    ],
+    "us": [
+      "US-FTC-ACT",
+      "US-CCPA",
+      "US-GPLAY-DATA"
+    ],
+    "eu": [
+      "EU-GDPR",
+      "EU-DSA",
+      "EU-AI-ACT"
+    ]
+  }
+}
