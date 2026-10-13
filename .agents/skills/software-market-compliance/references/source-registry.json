@@ -1,5 +1,14 @@
 [
   {
+    "id": "PRODUCT-ONE-CHINA-1",
+    "title": "Product Naming Policy: One China Baseline",
+    "authority": "AppGeoCompliance product policy owner",
+    "source_type": "company_policy",
+    "url": ".agents/skills/software-market-compliance/references/product-one-china-policy.md",
+    "last_checked": "2026-10-13",
+    "applicability": "Company product-policy baseline for product-controlled China, Hong Kong, Macao, and Taiwan displays in cn-mainland, us, and eu releases. It is not a claim that US or EU law universally requires identical wording."
+  },
+  {
     "id": "CN-GB-2659",
     "title": "GB/T 2659.1-2022 世界各国和地区及其行政区划名称代码 第1部分：国家和地区代码",
     "authority": "国家市场监督管理总局、国家标准化管理委员会",

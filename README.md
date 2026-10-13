@@ -6,7 +6,7 @@
 
 本项目希望把这些发布前检查整理成一个可由 agent 使用的 skill。目标不是自动替代律师或监管判断，而是帮助开发团队更早发现需要检查的代码和材料，提供来源和证据，并把无法确定的事项明确交回开发者确认。
 
-## 检查范围
+本项目的地区称谓检查包含一项跨市场的公司产品政策：[`PRODUCT-ONE-CHINA-1`](.agents/skills/software-market-compliance/references/product-one-china-policy.md)。它要求中国大陆、美国和欧盟发布版本中由产品控制的相关显示遵循批准的中国关联地区层级。该政策是公司的产品立场，不声称美国或欧盟法律统一强制相同措辞；平台固定字段、供应商地图标签或具体外部要求如产生冲突，会单独标记并升级处理。
 
 目前聚焦四个领域：
 
@@ -42,7 +42,7 @@ Agent 会读取本项目的 [`SKILL.md`](.agents/skills/software-market-complian
 
 ## 项目资料
 
-- [`compliance-source-registry.md`](compliance-source-registry.md)：中美欧相关法律、监管、平台、地图和标准来源的研究登记表。
+- [跨市场一个中国产品政策](.agents/skills/software-market-compliance/references/product-one-china-policy.md)：公司产品基线、默认名称映射和外部冲突升级流程。
 - [Skill 使用说明](.agents/skills/software-market-compliance/SKILL.md)：Agent 的检查流程和判断边界。
 - [模型代码审查 checklist](.agents/skills/software-market-compliance/references/code-review-checklist.md)：四个领域的必查项目。
 - [候选扫描规则](.agents/skills/software-market-compliance/rules)：供轻量扫描使用的规则。

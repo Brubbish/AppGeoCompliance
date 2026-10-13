@@ -1,19 +1,57 @@
 {
+  "one_china_policy": {
+    "id": "PRODUCT-ONE-CHINA-1",
+    "requirement_type": "company_policy",
+    "source_file": "references/product-one-china-policy.md",
+    "markets": ["cn-mainland", "us", "eu"],
+    "controlled_surfaces": [
+      "country_region_selector",
+      "product_ui",
+      "custom_map_label",
+      "map_legend",
+      "store_metadata",
+      "store_asset",
+      "marketing_content",
+      "user_facing_export"
+    ],
+    "entities": {
+      "CN": {
+        "zh-Hans": "中国",
+        "en": "China"
+      },
+      "HK": {
+        "zh-Hans": "中国香港特别行政区",
+        "en": "Hong Kong SAR, China"
+      },
+      "MO": {
+        "zh-Hans": "中国澳门特别行政区",
+        "en": "Macao SAR, China"
+      },
+      "TW": {
+        "zh-Hans": "中国台湾地区",
+        "en": "Taiwan, China"
+      }
+    },
+    "selector_rule": "Do not render HK, MO, or TW as sovereign-country peers of China on product-controlled country/region selectors.",
+    "exception_categories": [
+      "platform_immutable_display",
+      "provider_controlled_map_label",
+      "user_generated_content",
+      "verbatim_quotation",
+      "legal_or_contract_requirement"
+    ],
+    "conflict_disposition": "blocked_pending_escalation"
+  },
   "patterns": [
-    {"id": "taiwan", "label": "台湾/Taiwan", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:台湾|臺灣|Taiwan)"},
-    {"id": "hong-kong", "label": "香港/Hong Kong", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:香港|Hong\\s+Kong)"},
-    {"id": "macao", "label": "澳门/Macau", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:澳门|澳門|Macau|Macao)"},
+    {"id": "taiwan", "entity": "TW", "label": "台湾/Taiwan", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:台湾|臺灣|Taiwan)"},
+    {"id": "hong-kong", "entity": "HK", "label": "香港/Hong Kong", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:香港|Hong\\s+Kong)"},
+    {"id": "macao", "entity": "MO", "label": "澳门/Macau", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:澳门|澳門|Macau|Macao)"},
     {"id": "tibet", "label": "西藏/Tibet", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:西藏|Tibet)"},
     {"id": "xinjiang", "label": "新疆/Xinjiang", "markets": ["cn-mainland", "us", "eu"], "pattern": "(?:新疆|Xinjiang)"},
     {"id": "kashmir", "label": "克什米尔/Kashmir", "markets": ["us", "eu"], "pattern": "(?:克什米尔|Kashmir)"},
     {"id": "crimea", "label": "克里米亚/Crimea", "markets": ["us", "eu"], "pattern": "(?:克里米亚|Crimea)"}
   ],
-  "approved_policy_files": [
-    "naming-policy.json",
-    "country-region-policy.json",
-    "country-region-names.json"
-  ],
-  "sources": [
+  "reference_sources": [
     "CN-GB-2659",
     "UN-M49",
     "UNGEGN",
@@ -21,8 +59,9 @@
     "EU-STYLE-GUIDE"
   ],
   "notes": [
-    "A match is a review candidate, not a universal legal violation.",
-    "Do not encode one fixed political label as a rule for every UI context.",
+    "A static match is a candidate, not proof of a legal, platform, or contract violation.",
+    "For CN, HK, MO, and TW, review every product-controlled user-facing surface against PRODUCT-ONE-CHINA-1 in all selected markets.",
+    "Platform-controlled fields, provider-rendered map labels, user-generated content, and verbatim quotations require ownership/exception review rather than silent exemption.",
     "Images are not OCR-scanned by the standard-library implementation; review image assets separately."
   ]
 }

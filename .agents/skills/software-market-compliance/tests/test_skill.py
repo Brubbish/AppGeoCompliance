@@ -76,6 +76,41 @@ class SoftwareMarketComplianceSkillTests(unittest.TestCase):
         self.assertTrue(any(item["id"] == "NAME-REVIEW-TAIWAN" for item in self.findings(report, "candidate")))
         self.assertNotIn("confirmed_violation", report["summary"])
 
+    def test_one_china_policy_applies_to_all_selected_markets(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self.write_project(root, {"locales/en.json": '{"taiwan":"Taiwan", "hong_kong":"Hong Kong", "macao":"Macao"}\n'})
+            result = self.run_json(root, "--markets", "cn-mainland", "us", "eu")
+        report = self.report(result)
+        self.assertEqual(0, result.returncode, result.stderr)
+        candidates = self.findings(report, "candidate")
+        for finding_id in ("NAME-REVIEW-TAIWAN", "NAME-REVIEW-HONG-KONG", "NAME-REVIEW-MACAO"):
+            matches = [item for item in candidates if item["id"] == finding_id]
+            self.assertEqual({"cn-mainland", "us", "eu"}, {item["market"] for item in matches})
+            for item in matches:
+                self.assertIn("PRODUCT-ONE-CHINA-1", item["source_ids"])
+                self.assertIn("company-policy", item["title"].lower())
+        self.assertNotIn("confirmed_violation", report["summary"])
+
+    def test_one_china_policy_rule_declares_surfaces_and_mapping(self) -> None:
+        rules = json.loads((SKILL_ROOT / "rules" / "naming.json").read_text(encoding="utf-8"))
+        policy = rules["one_china_policy"]
+        self.assertEqual("PRODUCT-ONE-CHINA-1", policy["id"])
+        self.assertEqual("company_policy", policy["requirement_type"])
+        self.assertEqual({"cn-mainland", "us", "eu"}, set(policy["markets"]))
+        self.assertIn("country_region_selector", policy["controlled_surfaces"])
+        self.assertIn("custom_map_label", policy["controlled_surfaces"])
+        self.assertEqual("中国台湾地区", policy["entities"]["TW"]["zh-Hans"])
+        self.assertEqual("Taiwan, China", policy["entities"]["TW"]["en"])
+
+    def test_one_china_policy_source_is_internal_and_linked(self) -> None:
+        sources = json.loads((SKILL_ROOT / "references" / "source-registry.json").read_text(encoding="utf-8"))
+        policy_source = next(source for source in sources if source["id"] == "PRODUCT-ONE-CHINA-1")
+        self.assertEqual("company_policy", policy_source["source_type"])
+        project_root = SKILL_ROOT.parents[2]
+        self.assertTrue((project_root / policy_source["url"]).is_file())
+        self.assertIn("not a claim that US or EU law", policy_source["applicability"])
+
     def test_plain_json_location_field_conflict_is_generic_candidate(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
@@ -194,8 +229,9 @@ class SoftwareMarketComplianceSkillTests(unittest.TestCase):
         self.assertIn("即使脚本没有命中也要完成", skill)
         for domain in ("Country and region naming", "Legal and regulatory triggers", "Maps and geospatial information", "Age, children, and age ratings"):
             self.assertIn(domain, checklist)
-        for status in ("confirmed_issue", "candidate", "not_found", "not_reviewable"):
-            self.assertIn(status, checklist)
+        self.assertIn("PRODUCT-ONE-CHINA-1", checklist)
+        self.assertIn("company_policy", checklist)
+        self.assertIn("blocked_pending_escalation", checklist)
 
 
 if __name__ == "__main__":
